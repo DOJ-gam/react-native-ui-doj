@@ -1,0 +1,33 @@
+{
+  "name": "react-native-ui-doj",
+  "version": "1.0.0",
+  "description": "A Simple and easy to use react native ui library for react native",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DOJ-gam/react-native-ui-doj.git"
+  },
+  "keywords": [
+    "react-native",
+    "react-native-ui-doj",
+    "react-native-doj",
+    "doj",
+    "ui",
+    "doj-ui"
+  ],
+  "author": "DOJ - Daddy Omar Jeng",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DOJ-gam/react-native-ui-doj/issues"
+  },
+  "homepage": "https://github.com/DOJ-gam/react-native-ui-doj#readme",
+  "devDependencies": {
+    "metro-react-native-babel-preset": "^0.69.1"
+  },
+  "dependencies": {
+    "react-native-ui-doj": "file:react-native-ui-doj-1.0.0.tgz"
+  }
+}
