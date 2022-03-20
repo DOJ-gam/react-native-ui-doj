@@ -7,7 +7,6 @@
 ```js
 import { Dbutton } from "react-native-ui-doj";
 <Dbutton
-  h={20}
   m={20}
   p={10}
   bw={1}
