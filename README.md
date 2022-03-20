@@ -1,10 +1,11 @@
 # react-native-ui-doj
 
-An Open Source UI Library made for react native. It is Simple very simple to use and customize.
+An Open Source UI Library made for react native. It is very simple to use and customize.
 
 # Quick start
 
 - All our components start with the letter 'D',
+- All component names follow the camelCase syntaxt
 - They are easy to use
 - They are 100% customiseable
 - You can add your own styles just like how you would add styles to your normal react native components, except that here you pass them as props.

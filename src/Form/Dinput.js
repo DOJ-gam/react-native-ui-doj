@@ -63,6 +63,9 @@ const Dinput = (props) => {
         alignItems: "center",
         elevation: shadow ? shadow : 0,
 
+        fontSize: fs ? fs : 13,
+        color: text ? text : "black",
+
         ...style,
       }}
       {...rest}

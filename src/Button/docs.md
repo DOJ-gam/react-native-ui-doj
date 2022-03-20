@@ -115,12 +115,20 @@ import { Dbutton } from "react-native-ui-doj";
 <Dbutton pl={15}> Click me </Dbuttonm>;
 ```
 
-### **pr**### **px**
+### **pr**###
 
 - sets the paddingRight of your button
 
 ```html
-<Dbutton mr={10}> Click me </Dbuttonm>;
+<Dbutton pr={10}> Click me </Dbuttonm>;
+```
+
+**px**
+
+- sets the paddingRight and paddingLeft of your button
+
+```html
+<Dbutton px={10}> Click me </Dbuttonm>;
 ```
 
 ### **py**
