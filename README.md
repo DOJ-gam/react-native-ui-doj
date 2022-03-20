@@ -36,3 +36,5 @@ export function App(props) {
 # How to use our components(put it in a link to open another file)
 
 ## [ - **Button Component** ](/src/Button/docs.md)
+
+## [ - **Input and Form Component** ](/src/Form/docs.md)
