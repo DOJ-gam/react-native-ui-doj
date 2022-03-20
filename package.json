@@ -26,8 +26,5 @@
   "homepage": "https://github.com/DOJ-gam/react-native-ui-doj#readme",
   "devDependencies": {
     "metro-react-native-babel-preset": "^0.69.1"
-  },
-  "dependencies": {
-    "react-native-ui-doj": "file:react-native-ui-doj-1.0.0.tgz"
   }
 }
