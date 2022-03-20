@@ -75,7 +75,6 @@ const Dbutton = (props) => {
       <Text style={{ fontSize: fs ? fs : 13, color: text ? text : "black" }}>
         {children}
       </Text>
-      {console.log(rest, style)}
     </TouchableOpacity>
   );
 };
