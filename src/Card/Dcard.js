@@ -40,7 +40,7 @@ const Dcard = (props) => {
         // marginHorizontal: "10%",
         // elevation: 5,
 
-        backgroundColor: "#fff",
+        backgroundColor: bg ? bg : "#fff",
 
         height: h && h,
         minHeight: 50,
