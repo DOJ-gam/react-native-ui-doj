@@ -38,3 +38,9 @@ export function App(props) {
 ### [ - **Button Component** ](/src/Button/docs.md)
 
 ### [ - **Input and Form Component** ](/src/Form/docs.md)
+
+### [ - **View Component** ](/src/View/docs.md)
+
+### [ - **Text Component** ](/src/Text/docs.md)
+
+### [ - **Card Component** ](/src/Card/docs.md)
