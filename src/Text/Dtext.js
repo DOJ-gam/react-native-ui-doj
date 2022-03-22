@@ -52,7 +52,6 @@ const Dtext = (props) => {
         borderColor: bc && bc,
 
         backgroundColor: bg && bg,
-        borderRadius: br && br,
 
         elevation: shadow && shadow,
 
