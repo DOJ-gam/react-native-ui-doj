@@ -167,24 +167,6 @@ sets the border radius of your button
 <Dbutton br={20}> Click me </Dbuttonm>;
 ```
 
-### **text**
-
-- sets the fontColor of your buttont text
-
-```html
-<Dbutton text="white"> Click me </Dbuttonm>;
-or
-<Dbutton text="#fff"> Click me </Dbuttonm>;
-```
-
-### **fs**
-
-- sets the fontSize of your button text
-
-```html
-<Dbutton fs={17}> Click me </Dbuttonm>;
-```
-
 ### **bw**
 
 - sets the borderWidth of your button(you need to set borderColor(bc) props for this to work )

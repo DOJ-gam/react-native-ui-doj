@@ -21,8 +21,6 @@ const Dbutton = (props) => {
     w,
     bg,
     br,
-    text,
-    fs,
     bw,
     bc,
     shadow,
@@ -38,7 +36,7 @@ const Dbutton = (props) => {
       style={[
         styles.button,
         {
-          margin: m ? m : 0,
+          margin: m && m,
           marginVertical: my && my,
           marginHorizontal: mx && mx,
           marginTop: mt && mt,
@@ -46,7 +44,7 @@ const Dbutton = (props) => {
           marginLeft: ml && ml,
           marginRight: mr && mr,
 
-          padding: p ? p : 10,
+          padding: p && p,
           paddingVertical: py && py,
           paddingHorizontal: px && px,
           paddingTop: pt && pt,
@@ -54,17 +52,17 @@ const Dbutton = (props) => {
           paddingLeft: pl && pl,
           paddingRight: pr && pr,
 
-          borderWidth: bw ? bw : 0,
-          borderColor: bc ? bc : "none",
+          borderWidth: bw && bw,
+          borderColor: bc && bc,
 
           // height: h ? h : 100,
           width: w && w,
 
-          backgroundColor: bg ? bg : "#cdcdcd",
+          backgroundColor: bg && bg,
           borderRadius: br && br,
 
           alignItems: "center",
-          elevation: shadow ? shadow : 0,
+          elevation: shadow && shadow,
 
           ...style,
         },
@@ -72,9 +70,7 @@ const Dbutton = (props) => {
       onPress={onPress}
       disabled={disabled}
     >
-      <Text style={{ fontSize: fs ? fs : 13, color: text ? text : "black" }}>
-        {children}
-      </Text>
+      {children}
     </TouchableOpacity>
   );
 };

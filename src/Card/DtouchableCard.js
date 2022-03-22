@@ -1,8 +1,9 @@
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, TouchableOpacity } from "react-native";
 import React from "react";
 
-const Dcard = (props) => {
+const DtouchableCard = (props) => {
   const {
+    onPress,
     h,
     m,
     mb,
@@ -30,7 +31,7 @@ const Dcard = (props) => {
     ...rest
   } = props;
   return (
-    <View
+    <TouchableOpacity
       style={{
         // alignItems: "center",
         // justifyContent: "center",
@@ -71,12 +72,13 @@ const Dcard = (props) => {
 
         ...style,
       }}
+      onPress={onPress}
     >
       {children}
-    </View>
+    </TouchableOpacity>
   );
 };
 
-export default Dcard;
+export default DtouchableCard;
 
 const styles = StyleSheet.create({});
