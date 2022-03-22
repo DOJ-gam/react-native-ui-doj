@@ -3,6 +3,9 @@ import React from "react";
 
 const Dtext = (props) => {
   const {
+    h,
+    w,
+    br,
     m,
     mb,
     mt,
@@ -50,6 +53,9 @@ const Dtext = (props) => {
         paddingRight: pr && pr,
 
         backgroundColor: bg && bg,
+        height: h && h,
+        width: w && w,
+        borderRadius: br && br,
 
         ...style,
       }}

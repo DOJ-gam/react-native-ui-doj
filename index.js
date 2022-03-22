@@ -8,3 +8,4 @@ import Dtext from "./src/Text/Dtext";
 import DtouchableCard from "./src/Card/DtouchableCard";
 
 export { Dbutton, DformContainer, Dinput, Dcard, Dview, Dtext, DtouchableCard };
+// Add flex(alingn, etcc.. to views)

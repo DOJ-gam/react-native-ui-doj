@@ -13,10 +13,10 @@ const DformContainer = ({ children, style }) => {
   return (
     <ScrollView
       contentContainerStyle={{
-        flex: 1,
+        // flex: 1,
         // alignItems: "center",
-        justifyContent: "center",
-        margin: 10,
+        // justifyContent: "center",
+        // margin: 10,
         ...style,
       }}
     >
