@@ -51,8 +51,8 @@ const Dinput = (props) => {
         paddingLeft: pl && pl,
         paddingRight: pr && pr,
 
-        borderBottomWidth: 1,
-        borderWidth: bw ? bw : 0,
+        borderBottomWidth: !bw && 1,
+        borderWidth: bw && bw,
         borderColor: bc ? bc : "#333",
 
         width: w ? w : "100%",
