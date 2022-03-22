@@ -1,5 +1,5 @@
 // import Heading from "./src/Headings/Heading";
-import Dbutton from "./src/Button/Button";
+import Dbutton from "./src/Button/Dbutton";
 import DformContainer from "./src/Form/DformContainer";
 import Dinput from "./src/Form/Dinput";
 import Dcard from "./src/Card/Dcard";

@@ -27,6 +27,7 @@ const Dbutton = (props) => {
     disabled,
     style,
     onPress,
+    h,
     ...rest
   } = props;
 
