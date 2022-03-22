@@ -4,6 +4,7 @@ import React from "react";
 const Dview = (props) => {
   const {
     h,
+    w,
     m,
     mb,
     mt,
@@ -18,13 +19,12 @@ const Dview = (props) => {
     py,
     pl,
     pr,
-    w,
+
     bg,
     br,
     bw,
     bc,
     shadow,
-    disabled,
     children,
     style,
     ...rest
@@ -32,6 +32,33 @@ const Dview = (props) => {
   return (
     <View
       style={{
+        margin: m && m,
+        marginVertical: my && my,
+        marginHorizontal: mx && mx,
+        marginTop: mt && mt,
+        marginBottom: mb && mb,
+        marginLeft: ml && ml,
+        marginRight: mr && mr,
+
+        padding: p && p,
+        paddingVertical: py && py,
+        paddingHorizontal: px && px,
+        paddingTop: pt && pt,
+        paddingBottom: pb && pb,
+        paddingLeft: pl && pl,
+        paddingRight: pr && pr,
+
+        borderWidth: bw && bw,
+        borderColor: bc && bc,
+
+        height: h && h,
+        width: w && w,
+
+        backgroundColor: bg && bg,
+        borderRadius: br && br,
+
+        elevation: shadow && shadow,
+
         ...style,
       }}
     >

@@ -5,5 +5,6 @@ import Dinput from "./src/Form/Dinput";
 import Dcard from "./src/Card/Dcard";
 import Dview from "./src/View/Dview";
 import Dtext from "./src/Text/Dtext";
+import DtouchableCard from "./src/Card/DtouchableCard";
 
-export { Dbutton, DformContainer, Dinput, Dcard, Dview, Dtext };
+export { Dbutton, DformContainer, Dinput, Dcard, Dview, Dtext, DtouchableCard };

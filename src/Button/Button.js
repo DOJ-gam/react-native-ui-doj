@@ -55,13 +55,12 @@ const Dbutton = (props) => {
           borderWidth: bw && bw,
           borderColor: bc && bc,
 
-          // height: h ? h : 100,
+          height: h && h,
           width: w && w,
 
           backgroundColor: bg && bg,
           borderRadius: br && br,
 
-          alignItems: "center",
           elevation: shadow && shadow,
 
           ...style,

@@ -17,18 +17,52 @@ const Dtext = (props) => {
     py,
     pl,
     pr,
-    w,
     bg,
-    br,
-    bw,
     bc,
-    shadow,
-    disabled,
+    fs,
+    fw,
+    fc,
     children,
     style,
     ...rest
   } = props;
-  return <Text style={{ ...style }}>{children}</Text>;
+  return (
+    <Text
+      style={{
+        fontSize: fs && fs,
+        fontWeight: fw && fw,
+        color: fc && fc,
+
+        margin: m && m,
+        marginVertical: my && my,
+        marginHorizontal: mx && mx,
+        marginTop: mt && mt,
+        marginBottom: mb && mb,
+        marginLeft: ml && ml,
+        marginRight: mr && mr,
+
+        padding: p && p,
+        paddingVertical: py && py,
+        paddingHorizontal: px && px,
+        paddingTop: pt && pt,
+        paddingBottom: pb && pb,
+        paddingLeft: pl && pl,
+        paddingRight: pr && pr,
+
+        borderWidth: bw && bw,
+        borderColor: bc && bc,
+
+        backgroundColor: bg && bg,
+        borderRadius: br && br,
+
+        elevation: shadow && shadow,
+
+        ...style,
+      }}
+    >
+      {children}
+    </Text>
+  );
 };
 
 export default Dtext;
