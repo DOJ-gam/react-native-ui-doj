@@ -36,8 +36,8 @@ const Dinput = (props) => {
       style={{
         height: h ? h : 30,
         margin: m && 0,
-        marginVertical: my ? my : 15,
-        marginHorizontal: mx ? mx : 5,
+        marginVertical: my && my,
+        marginHorizontal: mx && mx,
         marginTop: mt && mt,
         marginBottom: mb && mb,
         marginLeft: ml && ml,
@@ -57,7 +57,7 @@ const Dinput = (props) => {
 
         width: w ? w : "100%",
 
-        // backgroundColor: bg ? bg : "transparent",
+        backgroundColor: bg ? bg : "transparent",
         borderRadius: br && br,
 
         alignItems: "center",
