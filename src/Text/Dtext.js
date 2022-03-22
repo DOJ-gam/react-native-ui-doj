@@ -49,7 +49,6 @@ const Dtext = (props) => {
         paddingLeft: pl && pl,
         paddingRight: pr && pr,
 
-        borderWidth: bw && bw,
         borderColor: bc && bc,
 
         backgroundColor: bg && bg,
