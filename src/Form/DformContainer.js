@@ -1,13 +1,10 @@
 import {
   StyleSheet,
-  Text,
   View,
-  KeyboardAvoidingView,
   TouchableWithoutFeedback,
-  Keyboard,
   ScrollView,
 } from "react-native";
-import React from "react";
+import React, { useState } from "react";
 
 const DformContainer = ({ children, style }) => {
   return (
