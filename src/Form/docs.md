@@ -50,7 +50,7 @@ export default function App() {
     <DformContainer style={styles.container}>
       <Dinput
         placeholder="Email"
-        onChangeText={(text) => setEmail(text)}
+        handleChange={(text) => setEmail(text)}
         value={email}
         style={styles.input}
         autoCapitalize="none"
@@ -59,7 +59,7 @@ export default function App() {
       <Dinput
         placeholder="Password"
         secureTextEntry={true}
-        onChangeText={(text) => setPassword(text)}
+        onChangeText={(text) => handleChange(text)}
         value={password}
         autoCapitalize="none"
       />
@@ -78,16 +78,82 @@ export default function App() {
 }
 ```
 
+## Handling Form and Data
+
+- Our form data component helps you manage all the data of your form. You do not need to a state to store your data.
+- Below is a sample of how to use it.
+
+```js
+import { StyleSheet } from "react-native";
+import React, { useState } from "react";
+import { DformContainer, DformData, Dinput, Dtext } from "react-native-ui-doj";
+
+export default function App() {
+  const [username, setUsername] = useState("");
+  const [formValues, handleFormValueChange, setFormValues] = DformData({
+    email: "",
+    password: "",
+  });
+  return (
+    <DformContainer
+      style={styles.container}
+      onSubmit={() => console.log("first")}
+    >
+      <Dinput
+        my={20}
+        placeholder="Email"
+        onChangeText={handleFormValueChange}
+        name="email"
+        style={styles.input}
+        autoCapitalize="none"
+        keyboardType="email-address"
+        error={{}}
+      />
+      <Dinput
+        my={20}
+        placeholder="Username"
+        handleChange={(text) => {
+          setUsername(text);
+        }}
+        name="username"
+        value={username}
+        style={styles.input}
+        autoCapitalize="none"
+        error={{}}
+      />
+
+      <Dtext>Email: {formValues.email}</Dtext>
+      <Dtext>username: {username}</Dtext>
+    </DformContainer>
+  );
+}
+
+const styles = StyleSheet.create({
+  container: {
+    marginTop: 80,
+    marginHorizontal: 20,
+  },
+});
+```
+
 # Reference
 
 ## Props
 
-### **onChangeText**
+### **handleChange**
 
 - You pass in a function to handle what will happen when text is changed
 
 ```html
-<Dinput h={20} onChangeText={(text) => setEmail(text)}/>
+<Dinput h={20} handleChange={(text) => setEmail(text)}/>
+```
+
+### **onChangeText**
+
+- You pass in our handleFormValueChange as a prop to handle your data for you. Note that you will need to pass the "name" prop because it will be used as the key to represent your data for that value
+
+```html
+<Dinput h="{20}" name="email" onChangeText="{handleFormValueChange}" />
 ```
 
 ### **h**
