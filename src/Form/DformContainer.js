@@ -30,7 +30,7 @@ const DformContainer = ({ children, style }) => {
 export default DformContainer;
 
 // here
-export const formData = (values) => {
+export const DformData = (values) => {
   const [formValues, setFormValues] = useState({
     ...values,
   });
