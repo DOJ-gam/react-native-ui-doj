@@ -136,6 +136,18 @@ const styles = StyleSheet.create({
 });
 ```
 
+### formValues
+
+- This stores all the values in your form using the _key value pair approach_. example: : **{name:"Omar", gender:"male"}**
+
+### handleFormValueChange
+
+- is a function that you pass as a prop to you Dinput Field and under the hood it will handle your input field's state using the 'name' prop provided or tht input field
+
+### setFormData
+
+- Is a function that you can use to manually edit your form data.
+
 # Reference
 
 ## Props
