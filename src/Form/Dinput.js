@@ -3,8 +3,9 @@ import React, { useState } from "react";
 
 const Dinput = (props) => {
   const {
-    onChangeText,
-    name,
+    onChangeText, //
+    name, //
+    label, //
     h,
     m,
     mb,
@@ -70,7 +71,7 @@ const Dinput = (props) => {
         ...style,
       }}
       {...rest}
-      onChangeText={onChangeText}
+      onChangeText={(text) => onChangeText(name, text)}
     />
   );
 };
