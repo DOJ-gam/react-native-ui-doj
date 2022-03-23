@@ -28,5 +28,18 @@ const DformContainer = ({ children, style }) => {
 };
 
 export default DformContainer;
+export const formData = (values) => {
+  const [formValues, setFormValues] = useState({
+    ...values,
+  });
+
+  const handleFormValueChange = (formInput, value) => {
+    setFormValues({
+      ...formValues,
+      [formInput]: value,
+    });
+  };
+  return [formValues, handleFormValueChange, setFormValues];
+};
 
 const styles = StyleSheet.create({});

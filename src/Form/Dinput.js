@@ -4,6 +4,7 @@ import React, { useState } from "react";
 const Dinput = (props) => {
   const {
     onChangeText,
+    name,
     h,
     m,
     mb,
