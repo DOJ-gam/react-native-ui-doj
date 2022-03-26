@@ -6,6 +6,7 @@ import Dcard from "./src/Card/Dcard";
 import Dview from "./src/View/Dview";
 import Dtext from "./src/Text/Dtext";
 import DtouchableCard from "./src/Card/DtouchableCard";
+import Dimage from "./src/image/Dimage";
 
 export {
   Dbutton,
@@ -16,5 +17,6 @@ export {
   Dtext,
   DtouchableCard,
   DformData,
+  Dimage,
 };
 // Add flex(alingn, etcc.. to views)
