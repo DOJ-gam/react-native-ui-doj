@@ -10,6 +10,14 @@ const Dinput = (props) => {
     flex, //
     items, //
     content, //
+    bbw, //
+    btw, //
+    bbc, //
+    btc, //
+    blw, //
+    brw, //
+    blc, //
+    brc, //
     h,
     m,
     mb,
@@ -61,11 +69,18 @@ const Dinput = (props) => {
         paddingLeft: pl && pl,
         paddingRight: pr && pr,
 
-        borderBottomWidth: 1,
         borderWidth: bw && bw,
         borderColor: bc ? bc : "#333",
+        borderTopWidth: btw && btw,
+        borderTopColor: btc && btc,
+        borderBottomWidth: bbw && bbw,
+        borderBottomColor: bbc && bbc,
+        borderLeftWidth: blw && blw,
+        borderLeftColor: blc && blc,
+        borderRightWidth: brw && brw,
+        borderRightColor: brc && brc,
 
-        width: w ? w : "100%",
+        width: w && w,
 
         backgroundColor: bg ? bg : "transparent",
         borderRadius: br && br,

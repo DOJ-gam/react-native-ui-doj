@@ -3,6 +3,19 @@ import React from "react";
 
 const Dtext = (props) => {
   const {
+    flex, //
+    items, //
+    content, //
+    bbw, //
+    btw, //
+    bbc, //
+    btc, //
+    blw, //
+    brw, //
+    blc, //
+    brc, //
+    text, //
+    bw, //
     h,
     w,
     br,
@@ -32,6 +45,11 @@ const Dtext = (props) => {
   return (
     <Text
       style={{
+        textAlign: text && text,
+        flexDirection: flex && flex,
+        alignItems: items && items,
+        justifyContent: content && content,
+
         fontSize: fs && fs,
         fontWeight: fw && fw,
         color: fc && fc,
@@ -51,6 +69,17 @@ const Dtext = (props) => {
         paddingBottom: pb && pb,
         paddingLeft: pl && pl,
         paddingRight: pr && pr,
+
+        borderWidth: bw && bw,
+        borderColor: bc && bc,
+        borderTopWidth: btw && btw,
+        borderTopColor: btc && btc,
+        borderBottomWidth: bbw && bbw,
+        borderBottomColor: bbc && bbc,
+        borderLeftWidth: blw && blw,
+        borderLeftColor: blc && blc,
+        borderRightWidth: brw && brw,
+        borderRightColor: brc && brc,
 
         backgroundColor: bg && bg,
         height: h && h,

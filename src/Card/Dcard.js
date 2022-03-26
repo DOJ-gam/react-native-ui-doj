@@ -3,6 +3,17 @@ import React from "react";
 
 const Dcard = (props) => {
   const {
+    flex, //
+    items, //
+    content, //
+    bbw, //
+    btw, //
+    bbc, //
+    btc, //
+    blw, //
+    brw, //
+    blc, //
+    brc, //
     h,
     m,
     mb,
@@ -32,19 +43,14 @@ const Dcard = (props) => {
   return (
     <View
       style={{
-        // alignItems: "center",
-        // justifyContent: "center",
-        // padding: 10,
-        // borderWidth: 1,
-        // width: "80%",
-        // marginHorizontal: "10%",
-        // elevation: 5,
-
+        flexDirection: flex && flex,
+        alignItems: items && items,
+        justifyContent: content && content,
         backgroundColor: bg ? bg : "#fff",
 
         height: h && h,
-        minHeight: 50,
-        margin: m && 10,
+        // minHeight: 50,
+        margin: m && m,
         marginVertical: my && my,
         marginHorizontal: mx && mx,
         marginTop: mt && mt,
@@ -60,11 +66,19 @@ const Dcard = (props) => {
         paddingLeft: pl && pl,
         paddingRight: pr && pr,
 
-        borderWidth: bw ? bw : 0,
+        borderWidth: bw && bw,
         borderColor: bc && bc,
+        borderTopWidth: btw && btw,
+        borderTopColor: btc && btc,
+        borderBottomWidth: bbw && bbw,
+        borderBottomColor: bbc && bbc,
+        borderLeftWidth: blw && blw,
+        borderLeftColor: blc && blc,
+        borderRightWidth: brw && brw,
+        borderRightColor: brc && brc,
 
         width: w && w,
-        minWidth: 100,
+        // minWidth: 100,
         borderRadius: br && br,
 
         elevation: shadow ? shadow : 5,
