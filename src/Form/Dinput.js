@@ -7,6 +7,9 @@ const Dinput = (props) => {
     handleChange, //
     name, //
     label, //
+    flex, //
+    items, //
+    content, //
     h,
     m,
     mb,
@@ -37,6 +40,10 @@ const Dinput = (props) => {
   return (
     <TextInput
       style={{
+        flexDirection: flex && flex,
+        alignItems: items && items,
+        justifyContent: content && content,
+
         height: h ? h : 30,
         margin: m && 0,
         marginVertical: my && my,

@@ -3,6 +3,9 @@ import React from "react";
 
 const Dbutton = (props) => {
   const {
+    flex, //
+    items, //
+    content, //
     children,
     m,
     mb,
@@ -37,6 +40,10 @@ const Dbutton = (props) => {
       style={[
         styles.button,
         {
+          flexDirection: flex && flex,
+          alignItems: items && items,
+          justifyContent: content && content,
+
           margin: m && m,
           marginVertical: my && my,
           marginHorizontal: mx && mx,
