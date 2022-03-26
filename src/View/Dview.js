@@ -3,6 +3,9 @@ import React from "react";
 
 const Dview = (props) => {
   const {
+    flex, //
+    items, //
+    content, //
     h,
     w,
     m,
@@ -32,6 +35,10 @@ const Dview = (props) => {
   return (
     <View
       style={{
+        flexDirection: flex && flex,
+        alignItems: items && items,
+        justifyContent: content && content,
+
         margin: m && m,
         marginVertical: my && my,
         marginHorizontal: mx && mx,
