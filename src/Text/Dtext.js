@@ -88,6 +88,7 @@ const Dtext = (props) => {
 
         ...style,
       }}
+      {...rest}
     >
       {children}
     </Text>
