@@ -22,12 +22,14 @@ npm install --save react-native-ui-doj
 
 ```js
 // App.js
-import { Dbutton } from "react-native-ui-doj";
+import { Dbutton, Dtext } from "react-native-ui-doj";
 
 export function App(props) {
   return (
     <>
-      <Dbutton onPress={handleButton}>Click me</Dbutton>
+      <Dbutton onPress={handleButton}>
+        <Dtext>Click me</Dtext>
+      </Dbutton>
     </>
   );
 }
