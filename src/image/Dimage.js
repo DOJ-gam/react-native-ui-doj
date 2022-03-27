@@ -82,7 +82,7 @@ const Dimage = (props) => {
         backgroundColor: bg && bg,
         borderRadius: br && br,
 
-        elevation: shadow && shadow,
+        // elevation: shadow && shadow,
 
         ...style,
       }}
