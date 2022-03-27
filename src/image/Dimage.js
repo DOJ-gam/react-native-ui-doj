@@ -86,6 +86,7 @@ const Dimage = (props) => {
 
         ...style,
       }}
+      {...rest}
     />
   );
 };
