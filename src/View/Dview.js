@@ -84,6 +84,7 @@ const Dview = (props) => {
 
         ...style,
       }}
+      {...rest}
     >
       {children}
     </View>
