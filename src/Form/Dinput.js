@@ -97,6 +97,7 @@ const Dinput = (props) => {
       onChangeText={(text) =>
         handleChange ? handleChange(text) : onChangeText(name, text)
       }
+      {...rest}
     />
   );
 };
