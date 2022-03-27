@@ -89,6 +89,7 @@ const Dbutton = (props) => {
 
           ...style,
         },
+        { ...rest },
       ]}
       onPress={onPress}
       disabled={disabled}
