@@ -85,6 +85,7 @@ const Dcard = (props) => {
 
         ...style,
       }}
+      {...rest}
     >
       {children}
     </View>
