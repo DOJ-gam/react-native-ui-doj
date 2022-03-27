@@ -91,7 +91,7 @@ const DformContainer = (props) => {
       }}
       {...rest}
     >
-      <TouchableWithoutFeedback style={{ flex: 1 }}>
+      <TouchableWithoutFeedback>
         <View>{children}</View>
       </TouchableWithoutFeedback>
     </ScrollView>
