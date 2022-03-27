@@ -3,7 +3,7 @@ import React from "react";
 
 const Dimage = (props) => {
   const {
-    image, //
+    src, //
     flex, //
     items, //
     content, //
@@ -43,7 +43,7 @@ const Dimage = (props) => {
   } = props;
   return (
     <Image
-      source={image}
+      source={src}
       style={{
         flexDirection: flex && flex,
         alignItems: items && items,
