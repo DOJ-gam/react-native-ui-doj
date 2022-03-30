@@ -100,11 +100,12 @@ const DformContainer = (props) => {
 
 export default DformContainer;
 
-// here
 export const DformData = (values) => {
   const [formValues, setFormValues] = useState({
     ...values,
   });
+  const [errors, setErrors] = useState({});
+  const [validated, setValidated] = useState(false);
 
   const handleFormValueChange = (formInput, value) => {
     setFormValues({
@@ -112,7 +113,25 @@ export const DformData = (values) => {
       [formInput]: value,
     });
   };
-  return [formValues, handleFormValueChange, setFormValues];
+
+  const handleError = (field, message) => {
+    if (message == null || !message || message == "") {
+      setValidated(true);
+    } else {
+      setValidated(false);
+    }
+    console.log("Message is ", message);
+    setErrors((prev) => ({ ...prev, [field]: message }));
+  };
+
+  return [
+    formValues,
+    setFormValues,
+    handleFormValueChange,
+    errors,
+    handleError,
+    validated,
+  ];
 };
 
 const styles = StyleSheet.create({});
