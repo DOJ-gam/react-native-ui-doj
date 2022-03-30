@@ -105,8 +105,7 @@ export const DformData = (values) => {
     ...values,
   });
   const [errors, setErrors] = useState({});
-  const [validated, setValidated] = useState(false);
-
+  // let validated = true;
   const handleFormValueChange = (formInput, value) => {
     setFormValues({
       ...formValues,
@@ -115,12 +114,6 @@ export const DformData = (values) => {
   };
 
   const handleError = (field, message) => {
-    if (message == null || !message || message == "") {
-      setValidated(true);
-    } else {
-      setValidated(false);
-    }
-    // console.log("Message is ", message);
     setErrors((prev) => ({ ...prev, [field]: message }));
   };
 
@@ -130,7 +123,6 @@ export const DformData = (values) => {
     handleFormValueChange,
     errors,
     handleError,
-    validated,
   ];
 };
 
