@@ -100,19 +100,30 @@ const DformContainer = (props) => {
 
 export default DformContainer;
 
-// here
 export const DformData = (values) => {
   const [formValues, setFormValues] = useState({
     ...values,
   });
-
+  const [errors, setErrors] = useState({});
+  // let validated = true;
   const handleFormValueChange = (formInput, value) => {
     setFormValues({
       ...formValues,
       [formInput]: value,
     });
   };
-  return [formValues, handleFormValueChange, setFormValues];
+
+  const handleError = (field, message) => {
+    setErrors((prev) => ({ ...prev, [field]: message }));
+  };
+
+  return [
+    formValues,
+    setFormValues,
+    handleFormValueChange,
+    errors,
+    handleError,
+  ];
 };
 
 const styles = StyleSheet.create({});

@@ -42,6 +42,25 @@ const Dtext = (props) => {
     style,
     ...rest
   } = props;
+
+  // const [customStyles, setCustomStyles] = useState({});
+  let customStyles = "";
+  const styles = props.class ? props.class.split(" ") : "";
+  styles
+    ? styles.forEach((element) => {
+        // let key = element.split("-")[0];
+        // let value = element.split("-")[1];
+        // let obj = {key: value}
+        // customStyles[key.replaceAll("'", " ")] = value;
+        // let temp = element.split("-");
+        // for (let i = 0; i < temp.length; i++) {
+        //   const element = temp[i];
+        // }
+        customStyles += ` ${element}`;
+      })
+    : null;
+  // console.log(customStyles);
+
   return (
     <Text
       style={{
