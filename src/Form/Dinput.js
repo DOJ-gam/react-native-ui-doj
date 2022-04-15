@@ -19,14 +19,19 @@ const Dinput = (props) => {
     leftIcon, //
     rightIcon, //
     password, //
-    showIcon,
-    hideIcon,
+    showIcon, //
+    hideIcon, //
+    label, //
+    labelStyle, //
+    keyboard, //
+    capitalize = "none", //
+    position = "relative", //
 
     name, //
-    label, //
     flex, //
-    items, //
-    content, //
+    fld, //
+    ai, //
+    jc, //
     bbw, //
     btw, //
     bbc, //
@@ -35,6 +40,12 @@ const Dinput = (props) => {
     brw, //
     blc, //
     brc, //
+    btlr, //
+    btrr, //
+    bblr, //
+    bbrr, //
+
+    fw, //
     h,
     m,
     mb,
@@ -70,15 +81,18 @@ const Dinput = (props) => {
 
   return (
     <>
+      {label ? <Dtext style={{ ...labelStyle }}>{label}</Dtext> : null}
       <View
         style={{
-          flexDirection: flex ? flex : "row",
-          alignItems: items ? items : "center",
-          justifyContent: content ? content : "space-between",
+          flexDirection: fld && fld,
+          alignItems: ai && ai,
+          justifyContent: jc && jc,
+          flex: flex && flex,
+          position: position,
 
           height: h ? h : 50,
           margin: m && m,
-          marginVertical: my ? my : 15,
+          marginVertical: my && my,
           marginHorizontal: mx && mx,
           marginTop: mt && mt,
           marginBottom: mb && mb,
@@ -108,6 +122,11 @@ const Dinput = (props) => {
 
           backgroundColor: bg ? bg : "transparent",
           borderRadius: br && br,
+          borderRadius: br && br,
+          borderTopLeftRadius: btlr && btlr,
+          borderTopRightRadius: btrr && btrr,
+          borderBottomLeftRadius: bblr && bblr,
+          borderBottomRightRadius: bbrr && bbrr,
 
           alignItems: "center",
           elevation: shadow ? shadow : 0,
@@ -121,9 +140,27 @@ const Dinput = (props) => {
             flex: 1,
             fontSize: fs ? fs : 13,
             color: text ? text : "black",
+            fontWeight: fw && fw,
             marginLeft: leftIcon ? 10 : 0,
             marginRight: rightIcon ? 10 : 0,
           }}
+          keyboardType={
+            keyboard == "number"
+              ? "numeric"
+              : keyboard == "text"
+              ? "default"
+              : keyboard == "phone"
+              ? "phone-pad"
+              : keyboard == "email"
+              ? "email-address"
+              : keyboard == "decimal"
+              ? "decimal-pad"
+              : keyboard == "url"
+              ? "url"
+              : keyboard
+          }
+          // keyboardType="decimal-pad"
+          autoCapitalize={capitalize}
           {...rest}
           secureTextEntry={hidePassword}
           onChangeText={(text) => {

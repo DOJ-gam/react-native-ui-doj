@@ -3,9 +3,11 @@ import React from "react";
 
 const Dview = (props) => {
   const {
+    position = "relative", //
     flex, //
-    items, //
-    content, //
+    fld, //
+    ai, //
+    jc, //
     bbw, //
     btw, //
     bbc, //
@@ -14,6 +16,10 @@ const Dview = (props) => {
     brw, //
     blc, //
     brc, //
+    btlr, //
+    btrr, //
+    bblr, //
+    bbrr, //
     h,
     w,
     m,
@@ -43,9 +49,11 @@ const Dview = (props) => {
   return (
     <View
       style={{
-        flexDirection: flex && flex,
-        alignItems: items && items,
-        justifyContent: content && content,
+        flexDirection: fld && fld,
+        alignItems: ai && ai,
+        justifyContent: jc && jc,
+        flex: flex && flex,
+        position: position,
 
         margin: m && m,
         marginVertical: my && my,
@@ -79,6 +87,11 @@ const Dview = (props) => {
 
         backgroundColor: bg && bg,
         borderRadius: br && br,
+        borderRadius: br && br,
+        borderTopLeftRadius: btlr && btlr,
+        borderTopRightRadius: btrr && btrr,
+        borderBottomLeftRadius: bblr && bblr,
+        borderBottomRightRadius: bbrr && bbrr,
 
         elevation: shadow && shadow,
 
