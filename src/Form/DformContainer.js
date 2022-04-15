@@ -8,9 +8,11 @@ import React, { useState } from "react";
 
 const DformContainer = (props) => {
   const {
+    position = "relative", //
     flex, //
-    items, //
-    content, //
+    fld, //
+    ai, //
+    jc, //
     bbw, //
     btw, //
     bbc, //
@@ -19,6 +21,10 @@ const DformContainer = (props) => {
     brw, //
     blc, //
     brc, //
+    btlr, //
+    btrr, //
+    bblr, //
+    bbrr, //
     h,
     w,
     m,
@@ -48,9 +54,11 @@ const DformContainer = (props) => {
   return (
     <ScrollView
       contentContainerStyle={{
-        flexDirection: flex && flex,
-        alignItems: items && items,
-        justifyContent: content && content,
+        flexDirection: fld && fld,
+        alignItems: ai && ai,
+        justifyContent: jc && jc,
+        flex: flex && flex,
+        position: position,
 
         margin: m && m,
         marginVertical: my && my,
@@ -84,6 +92,11 @@ const DformContainer = (props) => {
 
         backgroundColor: bg && bg,
         borderRadius: br && br,
+        borderRadius: br && br,
+        borderTopLeftRadius: btlr && btlr,
+        borderTopRightRadius: btrr && btrr,
+        borderBottomLeftRadius: bblr && bblr,
+        borderBottomRightRadius: bbrr && bbrr,
 
         elevation: shadow && shadow,
 
