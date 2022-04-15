@@ -3,9 +3,11 @@ import React from "react";
 
 const Dcard = (props) => {
   const {
+    position = "relative", //
     flex, //
-    items, //
-    content, //
+    fld, //
+    ai, //
+    jc, //
     bbw, //
     btw, //
     bbc, //
@@ -14,7 +16,12 @@ const Dcard = (props) => {
     brw, //
     blc, //
     brc, //
+    btlr, //
+    btrr, //
+    bblr, //
+    bbrr, //
     h,
+    w,
     m,
     mb,
     mt,
@@ -29,13 +36,12 @@ const Dcard = (props) => {
     py,
     pl,
     pr,
-    w,
+
     bg,
     br,
     bw,
     bc,
     shadow,
-    disabled,
     children,
     style,
     ...rest
@@ -43,13 +49,12 @@ const Dcard = (props) => {
   return (
     <View
       style={{
-        flexDirection: flex && flex,
-        alignItems: items && items,
-        justifyContent: content && content,
-        backgroundColor: bg ? bg : "#fff",
+        flexDirection: fld && fld,
+        alignItems: ai && ai,
+        justifyContent: jc && jc,
+        flex: flex && flex,
+        position: position,
 
-        height: h && h,
-        // minHeight: 50,
         margin: m && m,
         marginVertical: my && my,
         marginHorizontal: mx && mx,
@@ -77,11 +82,18 @@ const Dcard = (props) => {
         borderRightWidth: brw && brw,
         borderRightColor: brc && brc,
 
+        height: h && h,
         width: w && w,
-        // minWidth: 100,
-        borderRadius: br && br,
 
-        elevation: shadow ? shadow : 5,
+        backgroundColor: bg ? bg : "#fff",
+        borderRadius: br && br,
+        borderRadius: br && br,
+        borderTopLeftRadius: btlr && btlr,
+        borderTopRightRadius: btrr && btrr,
+        borderBottomLeftRadius: bblr && bblr,
+        borderBottomRightRadius: bbrr && bbrr,
+
+        elevation: shadow && shadow,
 
         ...style,
       }}
