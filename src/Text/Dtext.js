@@ -3,9 +3,11 @@ import React from "react";
 
 const Dtext = (props) => {
   const {
+    position = "relative", //
     flex, //
-    items, //
-    content, //
+    fld, //
+    ai, //
+    jc, //
     bbw, //
     btw, //
     bbc, //
@@ -14,6 +16,10 @@ const Dtext = (props) => {
     brw, //
     blc, //
     brc, //
+    btlr, //
+    btrr, //
+    bblr, //
+    bbrr, //
     text, //
     bw, //
     h,
@@ -43,31 +49,15 @@ const Dtext = (props) => {
     ...rest
   } = props;
 
-  // const [customStyles, setCustomStyles] = useState({});
-  let customStyles = "";
-  const styles = props.class ? props.class.split(" ") : "";
-  styles
-    ? styles.forEach((element) => {
-        // let key = element.split("-")[0];
-        // let value = element.split("-")[1];
-        // let obj = {key: value}
-        // customStyles[key.replaceAll("'", " ")] = value;
-        // let temp = element.split("-");
-        // for (let i = 0; i < temp.length; i++) {
-        //   const element = temp[i];
-        // }
-        customStyles += ` ${element}`;
-      })
-    : null;
-  // console.log(customStyles);
-
   return (
     <Text
       style={{
         textAlign: text && text,
-        flexDirection: flex && flex,
-        alignItems: items && items,
-        justifyContent: content && content,
+        flexDirection: fld && fld,
+        alignItems: ai && ai,
+        justifyContent: jc && jc,
+        flex: flex && flex,
+        position: position,
 
         fontSize: fs && fs,
         fontWeight: fw && fw,
@@ -104,6 +94,11 @@ const Dtext = (props) => {
         height: h && h,
         width: w && w,
         borderRadius: br && br,
+        borderRadius: br && br,
+        borderTopLeftRadius: btlr && btlr,
+        borderTopRightRadius: btrr && btrr,
+        borderBottomLeftRadius: bblr && bblr,
+        borderBottomRightRadius: bbrr && bbrr,
 
         ...style,
       }}
