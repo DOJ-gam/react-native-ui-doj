@@ -4,9 +4,11 @@ import React from "react";
 const Dimage = (props) => {
   const {
     src, //
+    position = "relative", //
     flex, //
-    items, //
-    content, //
+    fld, //
+    ai, //
+    jc, //
     bbw, //
     btw, //
     bbc, //
@@ -45,9 +47,11 @@ const Dimage = (props) => {
     <Image
       source={src}
       style={{
-        flexDirection: flex && flex,
-        alignItems: items && items,
-        justifyContent: content && content,
+        flexDirection: fld && fld,
+        alignItems: ai && ai,
+        justifyContent: jc && jc,
+        flex: flex && flex,
+        position: position,
 
         margin: m && m,
         marginVertical: my && my,
