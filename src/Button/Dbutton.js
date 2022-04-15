@@ -3,9 +3,11 @@ import React from "react";
 
 const Dbutton = (props) => {
   const {
+    position = "relative", //
     flex, //
-    items, //
-    content, //
+    fld, //
+    ai, //
+    jc, //
     bbw, //
     btw, //
     bbc, //
@@ -14,6 +16,10 @@ const Dbutton = (props) => {
     brw, //
     blc, //
     brc, //
+    btlr, //
+    btrr, //
+    bblr, //
+    bbrr, //
     children,
     m,
     mb,
@@ -48,9 +54,11 @@ const Dbutton = (props) => {
       style={[
         styles.button,
         {
-          flexDirection: flex && flex,
-          alignItems: items && items,
-          justifyContent: content && content,
+          flexDirection: fld && fld,
+          alignItems: ai && ai,
+          justifyContent: jc && jc,
+          flex: flex && flex,
+          position: position,
 
           margin: m && m,
           marginVertical: my && my,
@@ -84,6 +92,10 @@ const Dbutton = (props) => {
 
           backgroundColor: bg && bg,
           borderRadius: br && br,
+          borderTopLeftRadius: btlr && btlr,
+          borderTopRightRadius: btrr && btrr,
+          borderBottomLeftRadius: bblr && bblr,
+          borderBottomRightRadius: bbrr && bbrr,
 
           elevation: shadow && shadow,
 
