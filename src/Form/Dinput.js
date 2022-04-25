@@ -84,10 +84,12 @@ const Dinput = (props) => {
       {label ? <Dtext style={{ ...labelStyle }}>{label}</Dtext> : null}
       <View
         style={{
-          flexDirection: fld && fld,
-          alignItems: ai && ai,
-          justifyContent: jc && jc,
-          flex: flex && flex,
+          // flexDirection: fld && fld,
+          // alignItems: ai && ai,
+          // justifyContent: jc && jc,
+          // flex: flex && flex,
+          flexDirection: "row",
+          alignItems: "stretch",
           position: position,
 
           height: h ? h : 50,
@@ -194,9 +196,9 @@ const Dinput = (props) => {
           rightIcon
         ) : null}
         {error ? (
-          <Dtext style={{ position: "absolute", bottom: -20, color: "red" }}>
+          <Text style={{ position: "absolute", bottom: -20, color: "red" }}>
             {error}
-          </Dtext>
+          </Text>
         ) : null}
       </View>
     </>
